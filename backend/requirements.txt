@@ -1,0 +1,27 @@
+# Web
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# DB
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
+
+# Speech / ML
+# faster-whisper: clean prebuilt wheel (CTranslate2), avoids openai-whisper's
+# legacy pkg_resources build error and runs faster on CPU.
+faster-whisper==1.1.0
+# wav2vec2 phoneme recognizer (default) — robust on real recordings.
+transformers==4.46.3
+phonemizer==3.3.0           # espeak backend for the phoneme tokenizer
+# allosaurus: alternative lightweight recognizer (RECOGNIZER=allosaurus).
+allosaurus==1.0.2
+g2p-en==2.1.0
+# numpy 2.2.6 is the sweet spot: scipy 1.18 (pulled by allosaurus) needs >=2.0,
+# and numba 0.65 (pulled by resampy) supports up to 2.2.x.
+numpy==2.2.6
+scipy==1.18.0
+requests==2.34.2

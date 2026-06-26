@@ -1,0 +1,19 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+backend/.env
+
+# Allosaurus / whisper downloaded models
+backend/.venv/lib/**/allosaurus/pretrained/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+
+# Misc
+.DS_Store
+*.log
+
+# Per-attempt analysis logs (expected vs. heard phones)
+backend/logs/
